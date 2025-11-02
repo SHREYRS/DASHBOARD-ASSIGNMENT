@@ -1,0 +1,240 @@
+/* ============================================
+   CSS VARIABLES - DESIGN TOKENS
+   Light & Dark Theme Support
+   ============================================ */
+
+:root {
+  /* ========== LIGHT THEME (DEFAULT) ========== */
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f9fb;
+  --bg-tertiary: #f0f2f5;
+  --bg-hover: #f5f7fa;
+  --bg-active: #e8ecf1;
+  
+  /* Text Colors */
+  --text-primary: #1a1d1f;
+  --text-secondary: #6f767e;
+  --text-tertiary: #9a9fa5;
+  --text-inverse: #ffffff;
+  
+  /* Border Colors */
+  --border-primary: #e4e7eb;
+  --border-secondary: #d1d5db;
+  --border-hover: #c4c9d0;
+  
+  /* Sidebar */
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #6f767e;
+  --sidebar-text-active: #1a1d1f;
+  --sidebar-hover: #f7f9fb;
+  --sidebar-active: #f0f2f5;
+  --sidebar-border: #e4e7eb;
+  
+  /* Card */
+  --card-bg: #ffffff;
+  --card-border: #e4e7eb;
+  --card-shadow: rgba(0, 0, 0, 0.04);
+  
+  /* Status Colors */
+  --status-in-progress: #3b82f6;
+  --status-in-progress-bg: #eff6ff;
+  --status-complete: #10b981;
+  --status-complete-bg: #d1fae5;
+  --status-pending: #8b5cf6;
+  --status-pending-bg: #ede9fe;
+  --status-approved: #f59e0b;
+  --status-approved-bg: #fef3c7;
+  --status-rejected: #ef4444;
+  --status-rejected-bg: #fee2e2;
+  
+  /* Chart Colors */
+  --chart-primary: #3b82f6;
+  --chart-secondary: #8b5cf6;
+  --chart-tertiary: #10b981;
+  --chart-quaternary: #f59e0b;
+  --chart-grid: #e4e7eb;
+  --chart-text: #6f767e;
+  
+  /* Accent Colors */
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-green: #10b981;
+  --accent-orange: #f59e0b;
+  --accent-red: #ef4444;
+  
+  /* Interactive Elements */
+  --input-bg: #ffffff;
+  --input-border: #e4e7eb;
+  --input-focus: #3b82f6;
+  --input-text: #1a1d1f;
+  --input-placeholder: #9a9fa5;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Overlay */
+  --overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* ========== DARK THEME ========== */
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1e1e1e;
+  --bg-hover: #282828;
+  --bg-active: #323232;
+
+  /* Text Colors */
+  --text-primary: #efefef;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #707070;
+  --text-inverse: #141414;
+
+  /* Border Colors */
+  --border-primary: #1e1e1e;
+  --border-secondary: #323232;
+  --border-hover: #3c3c3c;
+
+  /* Sidebar */
+  --sidebar-bg: #141414;
+  --sidebar-text: #a0a0a0;
+  --sidebar-text-active: #efefef;
+  --sidebar-hover: #1e1e1e;
+  --sidebar-active: #282828;
+  --sidebar-border: #1e1e1e;
+
+  /* Card */
+  --card-bg: #141414;
+  --card-border: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  
+  /* Status Colors - Keep vibrant in dark mode */
+  --status-in-progress: #60a5fa;
+  --status-in-progress-bg: rgba(59, 130, 246, 0.15);
+  --status-complete: #34d399;
+  --status-complete-bg: rgba(16, 185, 129, 0.15);
+  --status-pending: #a78bfa;
+  --status-pending-bg: rgba(139, 92, 246, 0.15);
+  --status-approved: #fbbf24;
+  --status-approved-bg: rgba(245, 158, 11, 0.15);
+  --status-rejected: #f87171;
+  --status-rejected-bg: rgba(239, 68, 68, 0.15);
+  
+  /* Chart Colors */
+  --chart-primary: #60a5fa;
+  --chart-secondary: #a78bfa;
+  --chart-tertiary: #34d399;
+  --chart-quaternary: #fbbf24;
+  --chart-grid: #1e1e1e;
+  --chart-text: #a0a0a0;
+  
+  /* Accent Colors */
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+  --accent-green: #34d399;
+  --accent-orange: #fbbf24;
+  --accent-red: #f87171;
+  
+  /* Interactive Elements */
+  --input-bg: #141414;
+  --input-border: #1e1e1e;
+  --input-focus: #60a5fa;
+  --input-text: #efefef;
+  --input-placeholder: #707070;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+  
+  /* Overlay */
+  --overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* ========== TYPOGRAPHY ========== */
+:root {
+  /* Font Families */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+}
+
+/* ========== SPACING ========== */
+:root {
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+}
+
+/* ========== BORDER RADIUS ========== */
+:root {
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;
+}
+
+/* ========== TRANSITIONS ========== */
+:root {
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ========== Z-INDEX ========== */
+:root {
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ========== LAYOUT ========== */
+:root {
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 64px;
+  --topbar-height: 64px;
+  --content-max-width: 1440px;
+}
+

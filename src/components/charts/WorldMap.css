@@ -1,0 +1,144 @@
+/* World Map Container */
+.world-map-container {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  width: 100%;
+  padding: var(--space-4) 0;
+}
+
+.map-wrapper {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.world-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.5;
+  filter: brightness(0.7);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .world-map-svg {
+  opacity: 0.4;
+  filter: brightness(0.5) invert(1);
+}
+
+.map-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.map-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.marker-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color, #6366f1);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+}
+
+.marker-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color, #6366f1);
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+/* Location List */
+.location-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 0 0 auto;
+  min-width: 200px;
+}
+
+.location-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-primary);
+  transition: all var(--transition-base);
+}
+
+.location-item:last-child {
+  border-bottom: none;
+}
+
+.location-item:hover {
+  padding-left: var(--space-2);
+  background: var(--bg-hover);
+  margin: 0 calc(var(--space-2) * -1);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  border-radius: var(--radius-sm);
+}
+
+.location-city {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.location-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .world-map-container {
+    flex-direction: column;
+  }
+
+  .map-wrapper {
+    max-width: 100%;
+  }
+
+  .location-list {
+    width: 100%;
+  }
+
+  .location-city,
+  .location-value {
+    font-size: 13px;
+  }
+}
+
